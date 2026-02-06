@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.13.5 on win32)" generated="2026-02-06T11:39:02.207403" rpa="false" schemaversion="5">
+<suite id="s1" name="Ride" source="C:\Users\SzaboIstvan1\Documents\ride">
+<suite id="s1-s1" name="LoginSaucedemo" source="C:\Users\SzaboIstvan1\Documents\ride\LoginSaucedemo.robot">
+<test id="s1-s1-t1" name="Open SauceDemo" line="5">
+<kw name="Open Browser" owner="Selenium2Library">
+<msg time="2026-02-06T11:39:02.370461" level="INFO">Opening browser 'firefox' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>https://www.saucedemo.com/</arg>
+<arg>firefox</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-02-06T11:39:02.370158" elapsed="5.534563"/>
+</kw>
+<kw name="Input Text" owner="Selenium2Library">
+<msg time="2026-02-06T11:39:07.905399" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<arg>id=user-name</arg>
+<arg>standard_user</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-06T11:39:07.905039" elapsed="0.050211"/>
+</kw>
+<kw name="Input Password" owner="Selenium2Library">
+<msg time="2026-02-06T11:39:07.955848" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg time="2026-02-06T11:39:07.961241" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id=password</arg>
+<arg>secret_sauce</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-06T11:39:07.955568" elapsed="0.016734"/>
+</kw>
+<kw name="Click Button" owner="Selenium2Library">
+<msg time="2026-02-06T11:39:07.972922" level="INFO">Clicking button 'id=login-button'.</msg>
+<arg>id=login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-06T11:39:07.972607" elapsed="0.083223"/>
+</kw>
+<kw name="Page Should Contain Element" owner="Selenium2Library">
+<msg time="2026-02-06T11:39:08.059875" level="INFO">Current page contains element '//*[@id="shopping_cart_container"]'.</msg>
+<arg>//*[@id="shopping_cart_container"]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2026-02-06T11:39:08.056277" elapsed="0.003933"/>
+</kw>
+<kw name="Close Browser" owner="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-02-06T11:39:08.060756" elapsed="2.651040"/>
+</kw>
+<status status="PASS" start="2026-02-06T11:39:02.367921" elapsed="8.344541"/>
+</test>
+<test id="s1-s1-t2" name="Right username wrong password" line="15">
+<kw name="Open Browser" owner="Selenium2Library">
+<msg time="2026-02-06T11:39:10.725455" level="INFO">Opening browser 'firefox' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>https://www.saucedemo.com/</arg>
+<arg>firefox</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-02-06T11:39:10.725156" elapsed="5.576283"/>
+</kw>
+<kw name="Input Text" owner="Selenium2Library">
+<msg time="2026-02-06T11:39:16.302001" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<arg>id=user-name</arg>
+<arg>standard_user</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-06T11:39:16.301730" elapsed="0.041767"/>
+</kw>
+<kw name="Input Password" owner="Selenium2Library">
+<msg time="2026-02-06T11:39:16.344008" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg time="2026-02-06T11:39:16.347694" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id=password</arg>
+<arg>sdafasfdasdf</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-06T11:39:16.343753" elapsed="0.017061"/>
+</kw>
+<kw name="Click Button" owner="Selenium2Library">
+<msg time="2026-02-06T11:39:16.361419" level="INFO">Clicking button 'id=login-button'.</msg>
+<arg>id=login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-06T11:39:16.361138" elapsed="0.077795"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="Selenium2Library">
+<msg time="2026-02-06T11:39:16.441494" level="INFO">Current page does not contain element '//*[@id="shopping_cart_container"]'.</msg>
+<arg>//*[@id="shopping_cart_container"]</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2026-02-06T11:39:16.439182" elapsed="0.002481"/>
+</kw>
+<kw name="Page Should Contain" owner="Selenium2Library">
+<msg time="2026-02-06T11:39:16.445784" level="INFO">Current page contains text 'Epic sadface: Username and password do not match any user in this service'.</msg>
+<arg>text=Epic sadface: Username and password do not match any user in this service</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-02-06T11:39:16.441958" elapsed="0.003990"/>
+</kw>
+<kw name="Close Browser" owner="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-02-06T11:39:16.446224" elapsed="2.632864"/>
+</kw>
+<status status="PASS" start="2026-02-06T11:39:10.719663" elapsed="8.359723"/>
+</test>
+<test id="s1-s1-t3" name="Wrong username" line="26">
+<kw name="Open Browser" owner="Selenium2Library">
+<msg time="2026-02-06T11:39:19.084676" level="INFO">Opening browser 'firefox' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>https://www.saucedemo.com/</arg>
+<arg>firefox</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-02-06T11:39:19.084479" elapsed="5.547675"/>
+</kw>
+<kw name="Input Text" owner="Selenium2Library">
+<msg time="2026-02-06T11:39:24.632687" level="INFO">Typing text 'wronguser' into text field 'id=user-name'.</msg>
+<arg>id=user-name</arg>
+<arg>wronguser</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-06T11:39:24.632425" elapsed="0.041411"/>
+</kw>
+<kw name="Input Password" owner="Selenium2Library">
+<msg time="2026-02-06T11:39:24.675091" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg time="2026-02-06T11:39:24.683287" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id=password</arg>
+<arg>rightpassword</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-06T11:39:24.674744" elapsed="0.021490"/>
+</kw>
+<kw name="Click Button" owner="Selenium2Library">
+<msg time="2026-02-06T11:39:24.696751" level="INFO">Clicking button 'id=login-button'.</msg>
+<arg>id=login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-06T11:39:24.696510" elapsed="0.078402"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="Selenium2Library">
+<msg time="2026-02-06T11:39:24.778469" level="INFO">Current page does not contain element '//*[@id="shopping_cart_container"]'.</msg>
+<arg>//*[@id="shopping_cart_container"]</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2026-02-06T11:39:24.775262" elapsed="0.003387"/>
+</kw>
+<kw name="Page Should Contain" owner="Selenium2Library">
+<msg time="2026-02-06T11:39:24.793149" level="INFO">Current page contains text 'Epic sadface: Username and password do not match any user in this service'.</msg>
+<arg>text=Epic sadface: Username and password do not match any user in this service</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-02-06T11:39:24.778966" elapsed="0.014362"/>
+</kw>
+<kw name="Close Browser" owner="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-02-06T11:39:24.793598" elapsed="2.646797"/>
+</kw>
+<status status="PASS" start="2026-02-06T11:39:19.082889" elapsed="8.358007"/>
+</test>
+<test id="s1-s1-t4" name="Wrong username" line="37">
+<kw name="Open Browser" owner="Selenium2Library">
+<msg time="2026-02-06T11:39:27.457268" level="INFO">Opening browser 'firefox' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>https://www.saucedemo.com/</arg>
+<arg>firefox</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-02-06T11:39:27.456944" elapsed="5.490651"/>
+</kw>
+<kw name="Input Password" owner="Selenium2Library">
+<msg time="2026-02-06T11:39:32.948148" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg time="2026-02-06T11:39:32.962633" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id=password</arg>
+<arg>rightpassword</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-06T11:39:32.947883" elapsed="0.044611"/>
+</kw>
+<kw name="Click Button" owner="Selenium2Library">
+<msg time="2026-02-06T11:39:32.993074" level="INFO">Clicking button 'id=login-button'.</msg>
+<arg>id=login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-06T11:39:32.992775" elapsed="0.081323"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="Selenium2Library">
+<msg time="2026-02-06T11:39:33.087175" level="INFO">Current page does not contain element '//*[@id="shopping_cart_container"]'.</msg>
+<arg>//*[@id="shopping_cart_container"]</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2026-02-06T11:39:33.074617" elapsed="0.012763"/>
+</kw>
+<kw name="Page Should Contain" owner="Selenium2Library">
+<msg time="2026-02-06T11:39:33.092184" level="INFO">Current page contains text 'Epic sadface: Username is required'.</msg>
+<arg>text=Epic sadface: Username is required</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-02-06T11:39:33.087669" elapsed="0.004728"/>
+</kw>
+<kw name="Close Browser" owner="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-02-06T11:39:33.092722" elapsed="2.645352"/>
+</kw>
+<status status="PASS" start="2026-02-06T11:39:27.448736" elapsed="8.289672"/>
+</test>
+<test id="s1-s1-t5" name="Wrong username" line="47">
+<kw name="Open Browser" owner="Selenium2Library">
+<msg time="2026-02-06T11:39:35.747503" level="INFO">Opening browser 'firefox' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>https://www.saucedemo.com/</arg>
+<arg>firefox</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-02-06T11:39:35.747280" elapsed="5.504631"/>
+</kw>
+<kw name="Input Text" owner="Selenium2Library">
+<msg time="2026-02-06T11:39:41.252826" level="INFO">Typing text 'wronguser' into text field 'id=user-name'.</msg>
+<arg>id=user-name</arg>
+<arg>wronguser</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-06T11:39:41.252287" elapsed="0.072773"/>
+</kw>
+<kw name="Click Button" owner="Selenium2Library">
+<msg time="2026-02-06T11:39:41.325672" level="INFO">Clicking button 'id=login-button'.</msg>
+<arg>id=login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-06T11:39:41.325384" elapsed="0.080641"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="Selenium2Library">
+<msg time="2026-02-06T11:39:41.408712" level="INFO">Current page does not contain element '//*[@id="shopping_cart_container"]'.</msg>
+<arg>//*[@id="shopping_cart_container"]</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2026-02-06T11:39:41.406398" elapsed="0.002590"/>
+</kw>
+<kw name="Page Should Contain" owner="Selenium2Library">
+<msg time="2026-02-06T11:39:41.414168" level="INFO">Current page contains text 'Epic sadface: Password is required'.</msg>
+<arg>text=Epic sadface: Password is required</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-02-06T11:39:41.409470" elapsed="0.004873"/>
+</kw>
+<kw name="Close Browser" owner="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-02-06T11:39:41.414612" elapsed="2.623802"/>
+</kw>
+<status status="PASS" start="2026-02-06T11:39:35.742535" elapsed="8.296182"/>
+</test>
+<status status="PASS" start="2026-02-06T11:39:02.235627" elapsed="41.806536"/>
+</suite>
+<status status="PASS" start="2026-02-06T11:39:02.211476" elapsed="41.832878"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Ride" id="s1" pass="5" fail="0" skip="0">Ride</stat>
+<stat name="LoginSaucedemo" id="s1-s1" pass="5" fail="0" skip="0">Ride.LoginSaucedemo</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2026-02-06T11:39:27.448946" level="WARN">Multiple tests with name 'Wrong username' executed in suite 'Ride.LoginSaucedemo'.</msg>
+<msg time="2026-02-06T11:39:35.742574" level="WARN">Multiple tests with name 'Wrong username' executed in suite 'Ride.LoginSaucedemo'.</msg>
+</errors>
+</robot>
